@@ -41,6 +41,8 @@ const build = ($d) => {
 			let td = document.createElement("td"); tr.appendChild(td);
 			if ($v.Data[$v2.Mask] !== undefined) td.textContent = $v.Data[$v2.Mask].Date;
 			
+			td.appendChild(document.createTextNode(" "));
+			
 			let button = document.createElement("button"); td.appendChild(button);
 			button.className = "faR";
 			button.textContent = "";
