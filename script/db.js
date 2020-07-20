@@ -13,12 +13,13 @@ const query = ($qry, $params = {}, $success) => {
 	};
 	
 	const xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = async () => {
+	xhr.onreadystatechange = () => {
 		if (xhr.readyState !== 4) return;
 		if (xhr.status === 200) {
 			$success(JSON.parse(xhr.responseText));
 		} else if (xhr.status === 401) {
 			session = null;
+			alert("Unauthorised");
 			$.nav.goTo("Sign In");
 		};
 		spinner(false);
