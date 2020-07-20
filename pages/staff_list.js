@@ -45,7 +45,7 @@ const build = ($d) => {
 			button.className = "faR";
 			button.textContent = "";
 			button.ngpointerdown = () => {
-				if ($.db.signedIn() === false) { $.nav.goTo("Sign In"; return; };
+				if ($.db.signedIn() === false) { $.nav.goTo("Sign In"); return; };
 				$.db.query("update", {EmployeeNo:$v.EmployeeNo, Mask:$v2.Mask}, $d => { build($d); });
 			};
 			
