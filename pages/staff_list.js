@@ -18,6 +18,7 @@ const build = ($d) => {
 		
 		let table;
 		if (department !== $v.Department) {
+			department = $v.Department;
 			let fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
 			let legend = document.createElement("legend"); fieldset.appendChild(legend);
 			legend.textContent = $v.Department;
