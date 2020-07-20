@@ -49,6 +49,7 @@ const build = ($d) => {
 			button.ngstyle = {"background-color":"transparent", "border":"0"};
 			button.ngpointerdown = () => {
 				if ($.db.signedIn() === false) { $.nav.goTo("Sign In"); return; };
+				if (confirm("CONFIRM UPDATE\nName: " + $v.Name + "\nMask: " + $v2.Mask) === false) return;
 				$.db.query("fit_test_create", {EmployeeNo:$v.EmployeeNo, Mask:$v2.Mask}, $d => { build($d); });
 			};
 			
