@@ -4,7 +4,7 @@ let session = null;
 	
 const query = ($qry, $params = {}, $success) => {
 
-	if (session === null) {
+	if (session === null && document.querySelector("#username") !== null && document.querySelector("#password") !== null) {
 		let u = document.querySelector("#username").value;
 		let p = document.querySelector("#password").value;
 		session = JSON.stringify([u, p]);
