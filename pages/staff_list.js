@@ -26,7 +26,11 @@ const build = ($d) => {
 		};
 		
 		let tr = document.createElement("tr"); table.appendChild(tr);
-		let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Name;
+		let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Name + " - " + $.Role;
+		
+		$d[0].forEach($v2 => {
+			let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v2.Mask;
+		});
 		
 	});
 
