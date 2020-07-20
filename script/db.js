@@ -30,6 +30,10 @@ const query = ($qry, $params = {}, $success) => {
 	
 };
 
+const signedIn = () => {
+	retrun session !== null;
+}
+	
 const spinner = ($status) => {
 	if ($status === true) { document.body.appendChild(spinnerDiv); } else { spinnerDiv.remove(); };
 };
@@ -42,6 +46,7 @@ img.ngstyle = {"animation":"transformRotate 2s infinite linear"};
 
 return {
 	query: query,
+	signedIn: signedIn,
 };
   
 })();
