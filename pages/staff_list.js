@@ -1,6 +1,6 @@
 $.pages["Staff List"] = (() => {
 
-const load = () => {
+const load = ($in, $cb) => {
 	$.db.query("staff_list", {}, ($d) => {
 		build($d);
 		$cb(main);
