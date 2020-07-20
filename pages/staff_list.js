@@ -46,7 +46,7 @@ const build = ($d) => {
 			let button = document.createElement("button"); td.appendChild(button);
 			button.className = "faR";
 			button.textContent = "";
-			button.ngstyle = {"background-color":"transparent", "border":"0"};
+			button.ngstyle = {"background-color":"transparent", "border":"0", "color":"lightgrey"};
 			button.ngpointerdown = () => {
 				if ($.db.signedIn() === false) { $.nav.goTo("Sign In"); return; };
 				if (confirm("CONFIRM UPDATE\n\nName: " + $v.Name + "\nMask: " + $v2.Mask) === false) return;
