@@ -1,8 +1,12 @@
 $.nav = (() => {
 
 const goTo = ($page, $input) => {
-	let main = document.body.querySelector("main");
-	main.parentNode.replaceChild($.pages[$page](), main);
+	
+	$.pages[$page]($input, $ele => {
+		let main = document.body.querySelector("main");
+		main.parentNode.replaceChild($ele, main);
+	});
+	
 };
 
 return {
