@@ -1,7 +1,7 @@
-$.pages["Patient List"] = (() => {
+$.pages["Staff List"] = (() => {
 
 const load = () => {
-	$.db.query("patient_list", {}, ($d) => {
+	$.db.query("staff_list", {}, ($d) => {
 		build($d);
 		$cb(main);
 	});
@@ -10,6 +10,8 @@ const load = () => {
 const main = document.createElement("main");
 main.textContent = "132";
 
+const build = () => {};
+	
 return load;
 
 })();
