@@ -44,6 +44,7 @@ const build = ($d) => {
 			let button = document.createElement("button"); td.appendChild(button);
 			button.className = "faR";
 			button.textContent = "";
+			bbutton.ngstyle = {"background-color":"transparent", "border":"0"};
 			button.ngpointerdown = () => {
 				if ($.db.signedIn() === false) { $.nav.goTo("Sign In"); return; };
 				$.db.query("fit_test_create", {EmployeeNo:$v.EmployeeNo, Mask:$v2.Mask}, $d => { build($d); });
