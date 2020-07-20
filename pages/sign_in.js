@@ -17,13 +17,15 @@ let input = document.createElement("input"); div.appendChild(input);
 input.type = "text";
 input.required = true;
 input.autocomplete = "username";
+input.id = "username";
 	
 label = document.createElement("label"); div.appendChild(label); label.textContent = "Password";
 input = document.createElement("input"); div.appendChild(input);
 input.type = "password";
 input.required = true;
 input.autocomplete = "current-password";
-
+input.id = "password";
+	
 let button = document.createElement("button"); div.appendChild(button);
 button.ngstyle = {"grid-column":"1/-1"};
 button.className = "faS";
