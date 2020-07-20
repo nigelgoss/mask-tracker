@@ -39,6 +39,14 @@ Object.defineProperties(HTMLElement.prototype, {
 });
 
 [
+	"script/main.css"
+].forEach(($v) => {
+	let link = document.createElement("link"); document.head.appendChild(link);
+	link.href = $v;
+	link.rel = "stylesheet";
+});
+
+[
 	["FARegular", "resources/fa-regular-400.woff2"],
 	["FASolid", "resources/fa-solid-900.woff2"],
 ].forEach(($v) => {
