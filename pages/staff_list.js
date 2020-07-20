@@ -24,6 +24,13 @@ const build = ($d) => {
 			legend.textContent = $v.Department;
 			table = document.createElement("table"); fieldset.appendChild(table);
 			table.ngstyle = {"width":"100%"};
+			let tr = document.createElement("tr"); table.appendChild(tr);
+			let td = document.createElement("td"); tr.appendChild(td); td.textContent = "Name";
+			
+			$d[0].forEach($v2 => {
+				let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v2.Mask;
+			});
+			
 		};
 		
 		let tr = document.createElement("tr"); table.appendChild(tr);
