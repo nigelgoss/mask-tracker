@@ -30,7 +30,8 @@ const build = ($d) => {
 		let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Name + " - " + $.Role;
 				
 		$d[0].forEach($v2 => {
-			let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Data[$v2.Mask].Date;
+			let td = document.createElement("td"); tr.appendChild(td);
+			if ($v.Data[$v2.Mask] !== undefined) td.textContent = $v.Data[$v2.Mask].Date;
 		});
 		
 	});
