@@ -65,7 +65,7 @@ Object.defineProperties(HTMLElement.prototype, {
 			
 window.onload = () => {
 	$.nav.goTo("Staff List");
-	document.body.ngstyle = { animation:"opacityFade 3s", opacity:"1" };
+	document.body.ngstyle = { animation:"opacityFade 2s", opacity:"1" };
 };
 
 })();
