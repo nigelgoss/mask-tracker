@@ -1,4 +1,3 @@
-"use strict";
 $.db = (() => {
 	
 const query = ($qry, $params = {}, $success) => {
