@@ -23,13 +23,15 @@ const build = ($d) => {
 			let legend = document.createElement("legend"); fieldset.appendChild(legend);
 			legend.textContent = $v.Department;
 			table = document.createElement("table"); fieldset.appendChild(table);
+			table.ngstyle = {"width":"100%"};
 		};
 		
 		let tr = document.createElement("tr"); table.appendChild(tr);
 		let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v.Name + " - " + $.Role;
+		let d = JSON.parse($v.Data);
 		
 		$d[0].forEach($v2 => {
-			let td = document.createElement("td"); tr.appendChild(td); td.textContent = $v2.Mask;
+			let td = document.createElement("td"); tr.appendChild(td); td.textContent = d[$v2.Mask].Date;
 		});
 		
 	});
