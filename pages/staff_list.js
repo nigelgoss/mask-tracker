@@ -14,9 +14,9 @@ const build = ($d) => {
 	main.textContent = "";
 	
 	let department = null;
+	let table;
 	$d[1].forEach($v => {
 		
-		let table;
 		if (department !== $v.Department) {
 			department = $v.Department;
 			let fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
