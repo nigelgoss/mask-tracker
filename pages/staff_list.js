@@ -1,7 +1,7 @@
 $.pages["Staff List"] = (() => {
 
 const load = ($in, $cb) => {
-	$.db.query("staff_list", {}, ($d) => {
+	$.db.query("staff_list_read", {}, ($d) => {
 		build($d);
 		$cb(main);
 	});
@@ -46,7 +46,7 @@ const build = ($d) => {
 			button.textContent = "";
 			button.ngpointerdown = () => {
 				if ($.db.signedIn() === false) { $.nav.goTo("Sign In"); return; };
-				$.db.query("update", {EmployeeNo:$v.EmployeeNo, Mask:$v2.Mask}, $d => { build($d); });
+				$.db.query("fit_test_create", {EmployeeNo:$v.EmployeeNo, Mask:$v2.Mask}, $d => { build($d); });
 			};
 			
 		});
