@@ -1,0 +1,7 @@
+@keyframes opacityFade { 0% { opacity:0; } 100% { opacity:1; } }
+@keyframes transformRotate { 0% { transform:rotate(0deg); } 100% { transform:rotate(359deg); } }
+
+.faR { font-family:FARegular, Helvetica; font-size:1.1em; }
+.faS { font-family:FASolid, Helvetica; font-size:1.1em; }
+
+* { font-family:Helvetica; box-sizing:border-box; }
