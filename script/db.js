@@ -26,7 +26,7 @@ const query = ($qry, $params = {}, $success) => {
 	};
 	xhr.open("GET", "!/"+$qry+".sql", true);
 	xhr.setRequestHeader("auth", session);
-	xhr.send(JSON.stringify([$qry, $params]));
+	xhr.send(JSON.stringify([$qry, $params])); console.log(JSON.stringify([$qry, $params]));
 	spinner(true);
 	
 };
