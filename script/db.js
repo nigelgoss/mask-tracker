@@ -31,7 +31,7 @@ const query = ($qry, $params = {}, $success) => {
 };
 
 const signedIn = () => {
-	retrun session !== null;
+	return session !== null;
 }
 	
 const spinner = ($status) => {
