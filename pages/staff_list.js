@@ -16,11 +16,12 @@ const build = ($d) => {
 	let department = null;
 	$d[1].forEach($v => {
 		
+		let table;
 		if (department !== $v.Department) {
 			let fieldset = document.createElement("fieldset"); main.appendChild(fieldset);
 			let legend = document.createElement("legend"); fieldset.appendChild(legend);
 			legend.textContent = $v.Department;
-			let table = document.createElement("table"); fieldset.appendChild(table);
+			table = document.createElement("table"); fieldset.appendChild(table);
 		};
 		
 		let tr = document.createElement("tr"); table.appendChild(tr);
